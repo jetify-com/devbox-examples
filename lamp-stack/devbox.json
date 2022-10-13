@@ -1,0 +1,17 @@
+{
+    "packages": [
+        "mariadb",
+        "git",
+        "php81",
+        "apacheHttpd"
+    ],
+    "shell": {
+        "init_hook": [
+            "source conf/set-env.sh",
+            "conf/mysql/mysql.sh",
+            "apachectl start -f $HTTPD_CONFDIR/httpd.conf",
+            "php-fpm -y $PHP_CONFDIR/php-fpm.conf -p $PWD -D",
+            "source conf/set-exit.sh"
+        ]
+    }
+}
