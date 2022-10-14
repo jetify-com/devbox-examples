@@ -1,0 +1,13 @@
+{
+    "packages": [
+        "postgresql",
+        "glibcLocales"
+    ],
+    "shell": {
+        "init_hook": [
+            "source conf/set-env.sh",
+            "./conf/postgresql/postgresql.sh",
+            "source conf/set-exit.sh"
+        ]
+    }
+}
