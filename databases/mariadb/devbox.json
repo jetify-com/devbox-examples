@@ -1,0 +1,12 @@
+{
+    "packages": [
+        "mariadb"
+    ],
+    "shell": {
+        "init_hook": [
+            "source conf/set-env.sh",
+            "conf/mysql/mysql.sh",
+            "source conf/set-exit.sh"
+        ]
+    }
+}

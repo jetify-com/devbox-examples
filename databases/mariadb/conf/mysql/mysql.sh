@@ -1,11 +1,10 @@
 #! /bin/bash
-    
+# Installs the database if one doesn't exist, and then starts the mysql daemon. 
     set -eux
     alias mysql='mysql -u root'
 
     if [ ! -d "$MYSQL_DATADIR" ]; then
-      # Make sure to use normal authentication method otherwise we can only
-      # connect with unix account. But users do not actually exists in nix.
+    # Install the Database
        mysql_install_db --auth-root-authentication-method=normal \
          --datadir=$MYSQL_DATADIR --basedir=$MYSQL_BASEDIR \
          --pid-file=$MYSQL_PID_FILE
