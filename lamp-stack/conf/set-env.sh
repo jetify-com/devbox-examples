@@ -13,4 +13,6 @@ export MYSQL_UNIX_PORT=$MYSQL_HOME/mysql.sock
 export MYSQL_PID_FILE=$MYSQL_HOME/mysql.pid
 
 export PHP_CONFDIR=$PWD/conf/php
+export PHP_PORT=8080
 export HTTPD_CONFDIR=$PWD/conf/httpd
+export HTTPD_PORT=80

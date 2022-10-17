@@ -1,0 +1,12 @@
+[Sat Oct 15 14:12:23.600082 2022] [mpm_event:notice] [pid 70751:tid 4376233344] AH00489: Apache/2.4.54 (Unix) configured -- resuming normal operations
+[Sat Oct 15 14:12:23.600234 2022] [core:notice] [pid 70751:tid 4376233344] AH00094: Command line: '/nix/store/hqfsbahdz164237crj5gfzyq2i4mkbd8-apache-httpd-2.4.54/bin/httpd -f /Users/johnlago/src/devbox-examples/servers/apache/conf/httpd/httpd.conf'
+[Sat Oct 15 14:13:06.387531 2022] [mpm_event:notice] [pid 70751:tid 4376233344] AH00491: caught SIGTERM, shutting down
+[Sat Oct 15 14:14:05.495162 2022] [mpm_event:notice] [pid 71743:tid 4382000512] AH00489: Apache/2.4.54 (Unix) configured -- resuming normal operations
+[Sat Oct 15 14:14:05.495308 2022] [core:notice] [pid 71743:tid 4382000512] AH00094: Command line: '/nix/store/hqfsbahdz164237crj5gfzyq2i4mkbd8-apache-httpd-2.4.54/bin/httpd -f /Users/johnlago/src/devbox-examples/servers/apache/conf/httpd/httpd.conf'
+[Sat Oct 15 14:16:00.658818 2022] [mpm_event:notice] [pid 71743:tid 4382000512] AH00491: caught SIGTERM, shutting down
+[Sat Oct 15 14:16:05.868040 2022] [mpm_event:notice] [pid 72443:tid 4298048896] AH00489: Apache/2.4.54 (Unix) configured -- resuming normal operations
+[Sat Oct 15 14:16:05.868185 2022] [core:notice] [pid 72443:tid 4298048896] AH00094: Command line: '/nix/store/hqfsbahdz164237crj5gfzyq2i4mkbd8-apache-httpd-2.4.54/bin/httpd -f /Users/johnlago/src/devbox-examples/servers/apache/conf/httpd/httpd.conf'
+[Sat Oct 15 14:21:54.771569 2022] [mpm_event:notice] [pid 72443:tid 4298048896] AH00491: caught SIGTERM, shutting down
+[Sat Oct 15 14:22:01.772156 2022] [mpm_event:notice] [pid 74040:tid 4311942528] AH00489: Apache/2.4.54 (Unix) configured -- resuming normal operations
+[Sat Oct 15 14:22:01.772295 2022] [core:notice] [pid 74040:tid 4311942528] AH00094: Command line: '/nix/store/hqfsbahdz164237crj5gfzyq2i4mkbd8-apache-httpd-2.4.54/bin/httpd -f /Users/johnlago/src/devbox-examples/servers/apache/conf/httpd/httpd.conf'
+[Sat Oct 15 14:22:24.400160 2022] [mpm_event:notice] [pid 74040:tid 4311942528] AH00491: caught SIGTERM, shutting down
