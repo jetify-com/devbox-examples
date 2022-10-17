@@ -1,3 +1,5 @@
+--- You should run this query using `mysql -u root < setup_db.sql`
+
 DROP DATABASE IF EXISTS devbox_lamp;
 CREATE DATABASE devbox_lamp;
 
