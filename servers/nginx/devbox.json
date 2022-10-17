@@ -1,0 +1,12 @@
+{
+    "packages": [
+        "nginx"
+    ],
+    "shell": {
+        "init_hook": [
+            "source conf/set-env.sh",
+            "nginx -p $NGINX_CONFDIR -c nginx.conf -e error.log -g \"pid nginx.pid;\"",
+            "source conf/set-exit.sh"
+        ]
+    }
+}
