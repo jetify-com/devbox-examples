@@ -1,0 +1,12 @@
+{
+    "packages": [
+        "redis"
+    ],
+    "shell": {
+        "init_hook": [
+            "source conf/set-env.sh",
+            "./conf/redis/redis.sh",
+            "source conf/set-exit.sh"
+        ]
+    }
+}
