@@ -1,0 +1,8 @@
+{
+    "packages": [
+        "python310"
+    ],
+    "shell": {
+        "init_hook": null
+    }
+}

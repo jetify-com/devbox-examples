@@ -1,0 +1,8 @@
+{
+  "packages": [
+    "nodejs"
+  ],
+  "shell": {
+    "init_hook": null
+  }
+}

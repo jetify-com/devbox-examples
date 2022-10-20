@@ -1,0 +1,9 @@
+{
+  "packages": [
+    "php81",
+    "php81Packages.composer"
+  ],
+  "shell": {
+    "init_hook": null
+  }
+}

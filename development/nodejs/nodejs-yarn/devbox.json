@@ -1,0 +1,9 @@
+{
+  "packages": [
+    "nodejs",
+    "yarn"
+  ],
+  "shell": {
+    "init_hook": null
+  }
+}
