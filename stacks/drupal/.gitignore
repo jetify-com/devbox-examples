@@ -1,0 +1,7 @@
+conf/mysql/data
+*.log
+*.pid
+*.sock
+*.swp
+vendor/
+web/core/

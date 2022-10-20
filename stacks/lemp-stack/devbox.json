@@ -1,0 +1,17 @@
+{
+    "packages": [
+        "mariadb",
+        "git",
+        "php81",
+        "nginx"
+    ],
+    "shell": {
+        "init_hook": [
+            "source conf/set-env.sh",
+            "conf/mysql/mysql.sh",
+            "php-fpm -y $PHP_CONFDIR/php-fpm.conf -p $PWD &",
+            "nginx -p $NGINX_CONFDIR -c nginx.conf -e error.log -g \"pid nginx.pid;daemon off;\" &",
+            "source conf/set-exit.sh"
+        ]
+    }
+}
