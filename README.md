@@ -2,5 +2,7 @@
 
 Example dev environments built with Devbox:
 
-1. `lamp-stack` A shell that installs and starts MariaDB, PHP, and Apache
-2. `lemp-stack` A shell that installs and starts MariaDB, PHP, and nginx
+1. `databases` - Examples of popular DBs (eg.,MariaDB, Postgres, Redis)
+2. `development` - Shells for developing in different programming languages
+2. `stacks` - Full projects and web stacks, like LAMP and Drupal
+3. `servers` - Examples of servers, like Apache + Nginx
