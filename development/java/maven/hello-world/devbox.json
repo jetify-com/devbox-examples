@@ -1,0 +1,10 @@
+{
+  "packages": [
+    "maven",
+    "jdk",
+    "binutils"
+  ],
+  "shell": {
+    "init_hook": null
+  }
+}

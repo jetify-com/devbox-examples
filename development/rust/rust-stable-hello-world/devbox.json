@@ -1,0 +1,13 @@
+{
+    "packages": [
+        "rustup",
+        "libiconv"
+    ],
+    "shell": {
+        "init_hook": [
+            "source conf/set-env.sh",
+            "rustup default stable",
+            "cargo fetch"
+        ]
+    }
+}
