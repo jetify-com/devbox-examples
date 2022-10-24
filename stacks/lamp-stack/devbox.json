@@ -8,10 +8,15 @@
     "shell": {
         "init_hook": [
             "source conf/set-env.sh",
-            "conf/mysql/mysql.sh",
             "apachectl start -f $HTTPD_CONFDIR/httpd.conf",
             "php-fpm -y $PHP_CONFDIR/php-fpm.conf -p $PWD -D",
             "source conf/set-exit.sh"
         ]
-    }
+    },
+
+    "tasks": [{
+        "name": "start_db",
+        "init_hook": ["source conf/set-env.sh"],
+        "command": "conf/mysql/mysql.sh"
+    }]
 }
