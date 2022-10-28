@@ -1,3 +1,4 @@
 .devbox/
 .DS_STORE
 development/
+.vscode/settings.json
