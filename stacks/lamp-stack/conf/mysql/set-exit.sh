@@ -1,3 +1,4 @@
+
 # This script should be sourced in the init_hook of our `devbox.json`
 # This script will detect an EXIT signal, and then terminate running processes and run any other cleanup steps that are required
 
@@ -7,5 +8,4 @@ finish() {
   mysqladmin -u root --socket=$MYSQL_UNIX_PORT shutdown
 }
 
-trap finish EXIT
-trap `exit 1` SIGINT SIGSTOP SIGTERM SIGHUP
+trap finish SIGINT

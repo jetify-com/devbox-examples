@@ -6,5 +6,4 @@ finish() {
 
 }
 
-trap finish EXIT
-trap `exit 1` SIGINT SIGSTOP SIGTERM
+trap finish SIGINT

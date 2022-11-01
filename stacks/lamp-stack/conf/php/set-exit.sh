@@ -6,5 +6,4 @@ finish() {
   pkill -SIGINT -F $PHP_CONFDIR/php-fpm.pid
 }
 
-trap finish EXIT
-trap `exit 1` SIGINT SIGSTOP SIGTERM
+trap finish SIGINT
