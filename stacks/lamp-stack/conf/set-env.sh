@@ -1,5 +1,3 @@
-#! bash
-
 # This script should be sourced in the init_hook of our devbox.json
 # This sets environment variables needed to configure and start MariaDB, as well as some of our Configuration Paths
 

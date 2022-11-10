@@ -7,11 +7,26 @@
     ],
     "shell": {
         "init_hook": [
-            "source conf/set-env.sh",
-            "conf/mysql/mysql.sh",
-            "apachectl start -f $HTTPD_CONFDIR/httpd.conf",
-            "php-fpm -y $PHP_CONFDIR/php-fpm.conf -p $PWD -D",
-            "source conf/set-exit.sh"
-        ]
+            "source conf/set-env.sh"
+        ],
+        "scripts": {
+            "start_db": [
+                "source conf/mysql/set-exit.sh",
+                "conf/mysql/mysql.sh",
+                "tail -f conf/mysql/mysql.log"
+            ],
+            "mysql": ["source conf/mysql/set-exit.sh",
+                "conf/mysql/mysql.sh",
+                "mysql -u root"
+            ],
+            "php": ["source conf/php/set-exit.sh",
+                "php-fpm -y $PHP_CONFDIR/php-fpm.conf -p $PWD -D",
+                "tail -f $PHP_CONFDIR/php-fpm.log"
+            ],
+            "apache": ["source conf/httpd/set-exit.sh",
+                "apachectl start -f $HTTPD_CONFDIR/httpd.conf",
+                "tail -f $HTTPD_CONFDIR/access.log"
+            ]
+        }
     }
 }

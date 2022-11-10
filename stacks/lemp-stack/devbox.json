@@ -7,11 +7,27 @@
     ],
     "shell": {
         "init_hook": [
-            "source conf/set-env.sh",
-            "conf/mysql/mysql.sh",
-            "php-fpm -y $PHP_CONFDIR/php-fpm.conf -p $PWD &",
-            "nginx -p $NGINX_CONFDIR -c nginx.conf -e error.log -g \"pid nginx.pid;daemon off;\" &",
-            "source conf/set-exit.sh"
-        ]
+            "source conf/set-env.sh"
+        ],
+        "scripts": {
+            "start_db": [
+                "source conf/mysql/set-exit.sh",
+                "conf/mysql/mysql.sh",
+                "tail -f conf/mysql/mysql.log"
+            ],
+            "mysql": ["source conf/mysql/set-exit.sh",
+                "conf/mysql/mysql.sh",
+                "mysql -u root"
+            ],
+            "php": ["source conf/php/set-exit.sh",
+                "php-fpm -y $PHP_CONFDIR/php-fpm.conf -p $PWD -D",
+                "tail -f $PHP_CONFDIR/php-fpm.log"
+            ],
+            "nginx": ["source conf/nginx/set-exit.sh",
+                "nginx -p $NGINX_CONFDIR -c nginx.conf -e error.log -g \"pid nginx.pid;daemon off;\" &",
+                "tail -f $NGINX_CONFDIR/access.log"
+            ]
+
+        }
     }
 }
