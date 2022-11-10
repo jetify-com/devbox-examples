@@ -8,6 +8,11 @@
             "source conf/set-env.sh",
             "rustup default stable",
             "cargo fetch"
-        ]
+        ],
+        "scripts": {
+            "test": "cargo test -- --show-output",
+            "start" : "cargo run",
+            "build-docs": "cargo doc"
+        }
     }
 }
