@@ -10,30 +10,23 @@
             "source conf/set-env.sh"
         ],
         "scripts": {
-            "start_db": {
-                "init": ["source conf/mysql/set-exit.sh",
-                    "conf/mysql/mysql.sh"
-                ],
-                "command": "tail -f conf/mysql/mysql.log"
-            },
-            "mysql": {
-                "init": ["source conf/mysql/set-exit.sh", "conf/mysql/mysql.sh", "sleep 10"],
-                "command": "mysql -u root"
-            },
-            "php": {
-                "init": "source conf/php/set-exit.sh",
-                "command": [
-                    "php-fpm -y $PHP_CONFDIR/php-fpm.conf -p $PWD -D",
-                    "tail -f $PHP_CONFDIR/php-fpm.log"
-                ]
-            },
-            "apache": {
-                "init": "source conf/httpd/set-exit.sh",
-                "command": [
-                    "apachectl start -f $HTTPD_CONFDIR/httpd.conf",
-                    "tail -f $HTTPD_CONFDIR/access.log"
-                ]
-            }
+            "start_db": [
+                "source conf/mysql/set-exit.sh",
+                "conf/mysql/mysql.sh",
+                "tail -f conf/mysql/mysql.log"
+            ],
+            "mysql": ["source conf/mysql/set-exit.sh",
+                "conf/mysql/mysql.sh",
+                "mysql -u root"
+            ],
+            "php": ["source conf/php/set-exit.sh",
+                "php-fpm -y $PHP_CONFDIR/php-fpm.conf -p $PWD -D",
+                "tail -f $PHP_CONFDIR/php-fpm.log"
+            ],
+            "apache": ["source conf/httpd/set-exit.sh",
+                "apachectl start -f $HTTPD_CONFDIR/httpd.conf",
+                "tail -f $HTTPD_CONFDIR/access.log"
+            ]
         }
     }
 }
