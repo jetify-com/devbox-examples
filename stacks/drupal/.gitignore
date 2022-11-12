@@ -40,3 +40,6 @@ web/sites/simpletest
 
 # Ignore SimpleTest multi-site environment.
 # simpletest
+
+# Keep settings.php for devbox project
+!web/sites/default/settings.php
