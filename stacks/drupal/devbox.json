@@ -3,6 +3,7 @@
         "mariadb",
         "git",
         "php81",
+        "php81Packages.composer",
         "nginx"
     ],
     "shell": {
