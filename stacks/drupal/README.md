@@ -1,4 +1,4 @@
-# LAMP Stack
+# Drupal Stack
 
 An example Devbox shell for Drupal CMS
 
@@ -8,7 +8,7 @@ In this directory, run:
 
 `devbox shell`
 
-To create the `devbox_lamp` database and example table, you should run: 
+To create the `devbox_drupal` database and example table, you should run: 
 
 `mysql -u root < setup_db.sql`
 
