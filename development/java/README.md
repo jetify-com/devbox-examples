@@ -1,4 +1,4 @@
-# Setting Up Test Cases For Java
+# Setting Up Example Projects For Java
 
 ## Java with Maven
 Maven is an all-in-one CI-CD tool for building testing and deploying Java projects. To setup a sample project with Java and Maven in devbox follow the steps below:
