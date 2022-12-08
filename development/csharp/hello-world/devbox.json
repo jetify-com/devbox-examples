@@ -1,8 +1,8 @@
 {
-  "packages": [
-    "dotnet-sdk"
-  ],
-  "shell": {
-    "init_hook": null
-  }
+    "packages": [
+        "dotnet-sdk"
+    ],
+    "shell": {
+        "init_hook": null
+    }
 }

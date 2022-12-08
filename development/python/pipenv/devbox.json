@@ -1,9 +1,12 @@
 {
-    "packages": [
-        "python310",
-        "pipenv"
-    ],
-    "shell": {
-        "init_hook": "pipenv shell"
-    }
+  "packages": [
+    "python310",
+    "pipenv"
+  ],
+  "shell": {
+    "init_hook": "pipenv shell"
+  },
+  "nixpkgs": {
+    "commit": "af9e00071d0971eb292fd5abef334e66eda3cb69"
+  }
 }
