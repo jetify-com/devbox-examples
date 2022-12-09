@@ -1,0 +1,24 @@
+{
+    "packages": [
+        "openssl_1_1",
+        "boringssl",
+        "temporalite",
+        "temporal-cli",
+        "python310",
+        "python310Packages.grpcio-tools",
+        "poetry",
+        "jq"
+    ],
+    "shell": {
+        "init_hook": [
+            "export NAMESPACE=default",
+            "echo \"Details on Temporalite at https://github.com/temporalio/temporalite\""
+        ],
+        "scripts": {
+            "start-temporalite": "temporalite start --ephemeral --namespace $NAMESPACE --log-format=pretty --log-level=debug"
+        }
+    },
+    "nixpkgs": {
+        "commit": "52e3e80afff4b16ccb7c52e9f0f5220552f03d04"
+    }
+}
