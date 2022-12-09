@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["John Lago <750845+Lagoja@users.noreply.github.com>"]
 readme = "README.md"
-packages = [{include = "temporal_example"}]
+packages = [{include = "hello"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
