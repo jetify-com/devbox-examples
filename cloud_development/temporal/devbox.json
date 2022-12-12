@@ -1,0 +1,23 @@
+{
+    "packages": [
+        "python310",
+        "python310Packages.pip",
+        "python310Packages.grpcio",
+        "temporalite",
+        "temporal-cli"
+    ],
+    "shell": {
+        "init_hook": [
+            "export VENV_DIR=./.venv",
+            "sh venvShellHook.sh",
+            "source \"${VENV_DIR}/bin/activate\"",
+            "pip install -r requirements.txt"
+        ],
+        "scripts": {
+            "start-temporal": "temporalite start --namespace default --log-level warn --log-format pretty"
+        }
+    },
+    "nixpkgs": {
+        "commit": "52e3e80afff4b16ccb7c52e9f0f5220552f03d04"
+    }
+}
