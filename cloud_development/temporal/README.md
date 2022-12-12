@@ -1,12 +1,20 @@
 # Temporal
 
-Example devbox for testing temporal workflows using Temporalite and the Python temporal SDK.
+Example devbox for testing and developing Temporal workflows using Temporalite and the Python Temporal SDK.
+
+For more details, check out:
+
+* [Temporal.io](https://temporal.io/)
+* [Temporalite](https://github.com/temporalio/temporalite)
+* [Temporal Python SDK](https://github.com/temporalio/sdk-python)
+* [Temporal Python Samples](https://github.com/temporalio/sample-python)
 
 ## Starting Temporal
 
 ```bash
 devbox run start-temporal
 ```
+
 This will start the temporalite server for testing. You can view the WebUI at `localhost:8233`
 
 ## Starting a Devbox Shell
