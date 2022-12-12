@@ -1,25 +1,20 @@
 {
     "packages": [
-        "openssl_1_1",
-        "openssl_1_1.dev",
-        "clang",
+        "python310",
+        "python310Packages.pip",
+        "python310Packages.grpcio",
         "temporalite",
-        "temporal-cli",
-        "python311",
-        "poetry"
+        "temporal-cli"
     ],
     "shell": {
         "init_hook": [
-            "export GRPC_PYTHON_BUILD_SYSTEM_OPENSSL=true",
-            "export GRPC_UNIVERSAL2_REPAIR=true",
-            "export POETRY_CACHE_DIR=./.poetry-cache",
-            "export NAMESPACE=default",
-            "export CC=clang++",
-            "echo \"Details on Temporalite at https://github.com/temporalio/temporalite\""
+            "export VENV_DIR=./.venv",
+            "sh venvShellHook.sh",
+            "source \"${VENV_DIR}/bin/activate\"",
+            "pip install -r requirements.txt"
         ],
         "scripts": {
-            "start-temporalite": "temporalite start --ephemeral --namespace $NAMESPACE --log-format=pretty --log-level=warn",
-            "poetry-shell": "cd temporal_example/hello && poetry shell"
+            "start-temporal": "temporalite start --namespace default --log-level warn --log-format pretty"
         }
     },
     "nixpkgs": {
