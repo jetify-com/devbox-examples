@@ -1,0 +1,16 @@
+{
+    "packages": [
+        "ruby_3_1",
+        "bundler"
+    ],
+    "shell": {
+        "init_hook": [
+            "export GEMRC=$PWD/conf/ruby/.gemrc",
+            "export GEM_HOME=$PWD/conf/ruby/gems",
+            "export PATH=$GEM_HOME/bin:$PATH"
+        ]
+    },
+    "nixpkgs": {
+        "commit": "af9e00071d0971eb292fd5abef334e66eda3cb69"
+    }
+}
