@@ -1,0 +1,15 @@
+{
+    "packages": [
+        "nimble-unwrapped",
+        "nim-unwrapped"
+    ],
+    "shell": {
+        "init_hook": null,
+        "scripts": {
+            "nim-run": "nim c -r --verbosity:0 helloworld.nim"
+        }
+    },
+    "nixpkgs": {
+        "commit": "52e3e80afff4b16ccb7c52e9f0f5220552f03d04"
+    }
+}
