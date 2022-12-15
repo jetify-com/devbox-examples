@@ -25,7 +25,8 @@ This will start the temporalite server for testing. You can view the WebUI at `l
 devbox shell
 ```
 
-This will activate a virtual environment and install the Temporal Python SDK. The python `grpc` implementation is pre-installed via Nix, to speed up installations and improve cacheability.
+This will activate a virtual environment and install the Temporal Python SDK. 
+
 
 ## Testing the Temporal Workflows
 
