@@ -1,1 +1,2 @@
 temporalio==0.1b4
+cython
