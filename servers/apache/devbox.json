@@ -1,15 +1,11 @@
 {
-    "packages": [
-        "apacheHttpd"
-    ],
-    "shell": {
-        "init_hook": [
-            "source conf/set-env.sh",
-            "apachectl start -f $HTTPD_CONFDIR/httpd.conf",
-            "source conf/set-exit.sh"
-        ]
-    },
-    "nixpkgs": {
-        "commit": "52e3e80afff4b16ccb7c52e9f0f5220552f03d04"
-    }
+  "packages": [
+    "apacheHttpd"
+  ],
+  "shell": {
+    "init_hook": []
+  },
+  "nixpkgs": {
+    "commit": "52e3e80afff4b16ccb7c52e9f0f5220552f03d04"
+  }
 }

@@ -1,32 +1,20 @@
 {
     "packages": [
-        "mariadb",
-        "git",
+        "apacheHttpd",
+        "postgresql",
         "php81",
-        "apacheHttpd"
+        "php81Extensions.pgsql"
     ],
     "shell": {
-        "init_hook": [
-            "source conf/set-env.sh"
-        ],
+        "init_hook": [],
         "scripts": {
-            "start_db": [
-                "source conf/mysql/set-exit.sh",
-                "conf/mysql/mysql.sh",
-                "tail -f conf/mysql/mysql.log"
-            ],
-            "mysql": ["source conf/mysql/set-exit.sh",
-                "conf/mysql/mysql.sh",
-                "mysql -u root"
-            ],
-            "php": ["source conf/php/set-exit.sh",
-                "php-fpm -y $PHP_CONFDIR/php-fpm.conf -p $PWD -D",
-                "tail -f $PHP_CONFDIR/php-fpm.log"
-            ],
-            "apache": ["source conf/httpd/set-exit.sh",
-                "apachectl start -f $HTTPD_CONFDIR/httpd.conf",
-                "tail -f $HTTPD_CONFDIR/access.log"
+            "create_db": [
+                "createdb devbox_lamp",
+                "psql devbox_lamp < setup_postgres_db.sql"
             ]
         }
+    },
+    "nixpkgs": {
+        "commit": "52e3e80afff4b16ccb7c52e9f0f5220552f03d04"
     }
 }
