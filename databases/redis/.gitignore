@@ -1,5 +1,0 @@
-*.log
-*.pid
-*.sock
-*.rdb
-data/

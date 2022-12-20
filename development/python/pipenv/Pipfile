@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 emoji = "==2.1.0"
+grpcio = "*"
 
 [dev-packages]
 pytest = "*"

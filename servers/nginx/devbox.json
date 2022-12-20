@@ -3,13 +3,9 @@
     "nginx"
   ],
   "shell": {
-    "init_hook": [
-      "source conf/set-env.sh",
-      "nginx -p $NGINX_CONFDIR -c nginx.conf -e error.log -g \"pid nginx.pid;\"",
-      "source conf/set-exit.sh"
-    ]
+    "init_hook": null
   },
   "nixpkgs": {
-    "commit": "af9e00071d0971eb292fd5abef334e66eda3cb69"
+    "commit": "52e3e80afff4b16ccb7c52e9f0f5220552f03d04"
   }
 }
