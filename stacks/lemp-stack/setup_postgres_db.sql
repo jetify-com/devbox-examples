@@ -4,7 +4,6 @@ DROP DATABASE IF EXISTS devbox_lamp;
 CREATE DATABASE devbox_lamp;
 
 CREATE USER devbox_user WITH PASSWORD 'password';
-GRANT ALL PRIVILEGES ON devbox_lamp.* TO devbox_user;
 
 DROP TABLE IF EXISTS colors;
 CREATE TABLE colors (
@@ -14,4 +13,4 @@ CREATE TABLE colors (
 
 INSERT INTO colors (name, hex) VALUES ('red', '#FF0000'), ('blue', '#0000FF'), ('green', '#00FF00');
 
-
+GRANT ALL PRIVILEGES ON colors TO devbox_user;

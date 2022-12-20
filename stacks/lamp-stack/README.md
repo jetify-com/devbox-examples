@@ -1,32 +1,73 @@
 # LAMP Stack
 
-An example Devbox shell for Apache, MariaDB, and PHP.
+## postgresql-14.6
 
-## How to Run
+### postgresql NOTES
 
-In this directory, run: 
+To initialize the database run `initdb`.
 
-`devbox shell`
+### Services
 
-To create the `devbox_lamp` database and example table, you should run: 
+* postgresql
 
-`mysql -u root < setup_db.sql`
+Use `devbox services start|stop [service]` to interact with services
 
-From there, you can test the example using `curl localhost`
+### This plugin creates the following helper files
 
-To exit the shell, use `exit`
+None
 
-## Configuration
+### This plugin sets the following environment variables
 
-Because the Nix Store is immutable, we need to store our configuration, data, and logs in a local project directory. This is stored in the `conf` directory, in a subfolder for each of the packages that we will be installing. 
+* PGDATA=/Users/johnlago/src/devbox-examples/stacks/lamp-stack/.devbox/virtenv/postgresql/data
 
-## Init Hook
+To show this information, run `devbox info postgresql`
 
-The init_hook in our `devbox.json` takes the following steps: 
+## php-with-extensions-8.1.13
 
-1. Sources environment variables we will need for initializing and running our shell (set-env.sh)
-2. Launches Mariadb, Apache, and PHP-FPM in the background
-   1. If this is your first time running the shell, MariaDB installs a database in `conf/mysql/data`, and then starts mysqld using  `conf/mysql` as the home directory.
-   2. Apache is also started using the configuration in `conf/httpd`
-   3. PHP-FPM is started as a daemon, setting the current directory as your prefix and loading the configuration in `conf/php` 
-3. Sources the `finish()` bash function that will run when the Shell exits or is interrupted (set-exit.sh)
+### php NOTES
+
+PHP is compiled with default extensions. If you would like to use non-default extensions you can add them with devbox add php81Extensions.{extension} . For example, for the memcache extension you can do `devbox add php81Extensions.memcached`.
+
+### Services
+
+* php-fpm
+
+Use `devbox services start|stop [service]` to interact with services
+
+### This plugin creates the following helper files
+
+* /Users/johnlago/src/devbox-examples/stacks/lamp-stack/devbox.d/php81/php-fpm.conf
+
+### This plugin sets the following environment variables
+
+* PHPFPM_ERROR_LOG_FILE=/Users/johnlago/src/devbox-examples/stacks/lamp-stack/.devbox/virtenv/php81/php-fpm.log
+* PHPFPM_PID_FILE=/Users/johnlago/src/devbox-examples/stacks/lamp-stack/.devbox/virtenv/php81/php-fpm.log
+* PHPFPM_PORT=8082
+
+To show this information, run `devbox info php81`
+
+## apache-httpd-2.4.54
+
+### apache NOTES
+
+If you with to edit the config file, please copy it out of the .devbox directory.
+
+### Services
+
+* apache
+
+Use `devbox services start|stop [service]` to interact with services
+
+### This plugin creates the following helper files
+
+* /Users/johnlago/src/devbox-examples/stacks/lamp-stack/devbox.d/apacheHttpd/httpd.conf
+* /Users/johnlago/src/devbox-examples/stacks/lamp-stack/devbox.d/web/index.html
+
+### This plugin sets the following environment variables
+
+* HTTPD_ERROR_LOG_FILE=/Users/johnlago/src/devbox-examples/stacks/lamp-stack/.devbox/virtenv/apacheHttpd/error.log
+* HTTPD_PORT=8080
+* HTTPD_DEVBOX_CONFIG_DIR=/Users/johnlago/src/devbox-examples/stacks/lamp-stack
+* HTTPD_CONFDIR=/Users/johnlago/src/devbox-examples/stacks/lamp-stack/devbox.d/apacheHttpd
+
+To show this information, run `devbox info apacheHttpd`

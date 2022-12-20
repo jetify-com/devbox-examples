@@ -2,32 +2,26 @@
 
 include 'config.php';
 
-$conn = new mysqli($db_hostname, $db_username, $db_password, $db_database);
+$conn = pg_connect("host=$db_hostname dbname=$db_database user=$db_username password=$db_password")
+	or die('Could not connect: ' . pg_last_error());
 
-if (!is_null($conn->connect_error)){
-	echo "Connection Failed<br>";
-	echo "Error Number: " . $e->getCode() . "<br>";
-	echo "Error Message: " . $e->getMessage() . "br>";
-	die();
-}
-
-echo "Successfully Connected <br> <br>";
+echo "<h1> Successfully Connected to PostgreSQL</h1> \n \n";
 
 $query = "SELECT * FROM colors;";
-$result = $conn->query($query);
+$result = pg_query($conn, $query) or die ('Query failed: ' . pg_last_error());
 
-if (!$result)
-{
-	   echo 'Query error: ' . mysqli_error($mysqli);
-	      die();
-}
+$status = pg_result_status($result);
 
-if ($result->num_rows > 0){
-	while ($row = $result->fetch_assoc()){
-		echo "id: " . $row["id"] . " - Color: " . $row["name"] . " - Hex: " . $row["hex"] . "<br>";
+if ($status == PGSQL_TUPLES_OK){
+	echo "<ul> \n";
+	while ($row = pg_fetch_array($result, null, PGSQL_ASSOC)){
+		echo "<li> id: " . $row["id"] . " - Color: " . $row["name"] . " - Hex: " . $row["hex"] . "</li> \n";
 	}
+	echo "</ul>";
 } else {
 	echo "0 results found";
 }
 
-$conn->close();
+pg_free_result($result);
+
+pg_close($conn);
