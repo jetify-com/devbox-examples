@@ -3,20 +3,31 @@
         "minikube",
         "kubectl",
         "kubernetes-helm-wrapped",
-        "docker"
+        "podman",
+        "qemu_kvm"
     ],
     "shell": {
         "init_hook": [
             "export DEVBOX_HOME=$PWD/home",
             "export MINIKUBE_HOME=$DEVBOX_HOME/.minikube",
             "export KUBECONFIG=$DEVBOX_HOME/.kube/config",
+            "export MINIKUBE_ROOTLESS=true",
             "helm repo add my-repo https://charts.bitnami.com/bitnami"
         ],
         "scripts": {
+            "podman-init": [
+                "podman machine init",
+                "podman machine set --cpus=2"
+            ],
+            "podman": [
+                "podman-finish() { minikube stop && podman machine stop }",
+                "trap podman-finish SIGTERM SIGINT EXIT",
+                "podman machine start"
+            ],
             "minikube": [
                 "finish() { minikube stop }",
                 "trap finish SIGTERM SIGINT EXIT",
-                "minikube start",
+                "minikube start --driver podman --container-runtime containerd",
                 "minikube logs -f"
             ]
         }
