@@ -16,11 +16,11 @@ Use `devbox services start|stop [service]` to interact with services
 
 ## This plugin creates the following helper files
 
-* /Users/johnlago/src/devbox-examples/databases/redis/devbox.d/redis/redis.conf
+* ./devbox.d/redis/redis.conf
 
 ## This plugin sets the following environment variables
 
 * REDIS_PORT=6379
-* REDIS_CONF=/Users/johnlago/src/devbox-examples/databases/redis/devbox.d/redis/redis.conf
+* REDIS_CONF=./devbox.d/redis/redis.conf
 
 To show this information, run `devbox info redis`
