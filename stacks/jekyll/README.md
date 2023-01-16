@@ -1,5 +1,7 @@
 # Jekyll Example
 
+[![Built with Devbox](https://jetpack.io/devbox/img/shield_moon.svg)](https://jetpack.io/devbox/docs/contributor-quickstart/)
+
 Inspired by https://litchipi.github.io/nix/2023/01/12/build-jekyll-blog-with-nix.html 
 
 ## How to Use
