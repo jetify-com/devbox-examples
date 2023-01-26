@@ -8,11 +8,23 @@
     ],
     "shell": {
         "init_hook": [
-            "source conf/set-env.sh",
-            "conf/mysql/mysql.sh",
-            "php-fpm -y $PHP_CONFDIR/php-fpm.conf -p $PWD &",
-            "nginx -p $NGINX_CONFDIR -c nginx.conf -e error.log -g \"pid nginx.pid;daemon off;\" &",
-            "source conf/set-exit.sh"
-        ]
+            "source devbox.d/mysql/set-env.sh"
+        ],
+        "scripts": {
+            "start_services": [
+                "devbox.d/mysql/mysql.sh",
+                "devbox services start"
+            ],
+            "stop_services": [
+                "devbox services stop",
+                "mysqladmin -u root --socket=$MYSQL_UNIX_PORT shutdown"
+            ],
+            "install_drupal": [
+                "./install-drupal.sh"
+            ]
+        }
+    },
+    "nixpkgs": {
+        "commit": "52e3e80afff4b16ccb7c52e9f0f5220552f03d04"
     }
 }

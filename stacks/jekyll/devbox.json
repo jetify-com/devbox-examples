@@ -4,11 +4,10 @@
         "ruby_3_1"
     ],
     "shell": {
-        "init_hook": [
-            "gem install jekyll --version \"~> 3.9.2\""
-        ],
+        "init_hook": [],
         "scripts": {
             "generate": [
+                "gem install jekyll --version \"~> 3.9.2\" --no-document",
                 "cd myblog",
                 "bundle update",
                 "bundle lock",
