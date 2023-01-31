@@ -5,7 +5,9 @@ author      = "Your Name"
 description = "Example .nimble file."
 license     = "MIT"
 
+bin = @["spinnytest"]
+
 # Deps
 
 requires "nim >= 0.10.0"
-requires "nimgame"
+requires "spinny"
