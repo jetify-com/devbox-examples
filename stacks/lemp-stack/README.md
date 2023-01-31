@@ -1,34 +1,25 @@
 # LEMP Stack
 
-An example Devbox shell for NGINX, MariaDB, and PHP.
+[![Open In Devbox.sh](https://jetpack.io/img/devbox/open-in-devbox.svg)](https://devbox.sh/github.com/jetpack-io/devbox-examples?folder=stacks/lemp-stack)
+
+An example Devbox shell for NGINX, Postgres, and PHP.
 
 ## How to Run
 
-In this directory, run: 
+### Initializing
+
+In this directory, run:
 
 `devbox shell`
 
-To create the `devbox_lamp` database and example table, you should run: 
+This will run `initdb` automatically on initialization. To start the Servers + Postgres service, run:
 
-`mysql -u root < setup_db.sql`
+`devbox services start`
 
-From there, you can test the example using `curl localhost`
+### Creating the DB
 
-To exit the shell, use `exit`
+You can run the creation script using `devbox run create_db`. This will create a Postgres DB based on `setup_postgres_db.sql`.
 
-## Configuration
+### Testing the Example
 
-Because the Nix Store is immutable, we need to store our configuration, data, and logs in a local project directory. This is stored in the `conf` directory, in a subfolder for each of the packages that we will be installing. 
-
-## Init Hook
-
-The init_hook in our `devbox.json` takes the following steps: 
-
-1. Sources environment variables we will need for initializing and running our shell (set-env.sh)
-2. Launches MariaDB, Nginx, and PHP-FPM in the background
-   1. If this is your first time running the shell, MariaDB installs a database in `conf/mysql/data`, and then starts mysqld using  `conf/mysql` as the home directory.
-   2. NGINX is also started using the configuration in `conf/nginx`.
-   3. PHP-FPM is started as a daemon, setting the current directory as your prefix and loading the configuration in `conf/php` 
-3. Sources the `finish()` bash function that will run when the Shell exits or is interrupted (set-exit.sh). This script kills the running processes and deletes any leftover files.
-
-PID files, sock files, and logs are also stored in the conf directory so they can be managed within your project.
+You can query Nginx on port 80, which will route to the PHP example. 

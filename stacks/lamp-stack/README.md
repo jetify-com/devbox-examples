@@ -1,5 +1,7 @@
 # LAMP Stack
 
+[![Open In Devbox.sh](https://jetpack.io/img/devbox/open-in-devbox.svg)](https://devbox.sh/github.com/jetpack-io/devbox-examples?folder=stacks/lamp-stack)
+
 ## postgresql-14.6
 
 ### postgresql NOTES

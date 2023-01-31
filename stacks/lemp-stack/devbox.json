@@ -6,7 +6,9 @@
         "php81Extensions.pgsql"
     ],
     "shell": {
-        "init_hook": [],
+        "init_hook": [
+            "initdb"
+        ],
         "scripts": {
             "create_db": [
                 "createdb devbox_lemp",

@@ -2,6 +2,8 @@
 
 An example Devbox shell for Drupal CMS
 
+[![Open In Devbox.sh](https://jetpack.io/img/devbox/open-in-devbox.svg)](https://devbox.sh/github.com/jetpack-io/devbox-examples?folder=stacks/drupal)
+
 ## How to Run
 
 In this directory, run:
