@@ -17,7 +17,10 @@ For more details, check out:
 devbox run start-temporal
 ```
 
-This will start the temporalite server for testing. You can view the WebUI at `localhost:8233`
+This will start the temporalite server for testing.
+
+* You can view the WebUI at `localhost:8233` 
+* By default, Temporal will listen for activities/requests on port `7233`
 
 ## Starting a Devbox Shell
 
@@ -26,7 +29,6 @@ devbox shell
 ```
 
 This will activate a virtual environment and install the Temporal Python SDK. 
-
 
 ## Testing the Temporal Workflows
 
