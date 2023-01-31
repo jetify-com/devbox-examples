@@ -1,20 +1,20 @@
 {
-    "packages": [
-        "ruby_3_1",
-        "bundler",
-        "nodejs-19_x",
-        "yarn",
-        "sqlite"
-    ],
-    "shell": {
-        "init_hook": [
-            "gem install rails",
-            "cd blog",
-            "./bin/bundle install",
-            "./bin/rails db:prepare"
-        ]
-    },
-    "nixpkgs": {
-        "commit": "52e3e80afff4b16ccb7c52e9f0f5220552f03d04"
-    }
+  "packages": [
+    "ruby_3_1",
+    "bundler",
+    "nodejs-19_x",
+    "yarn",
+    "sqlite"
+  ],
+  "shell": {
+    "init_hook": [
+      "gem install rails",
+      "cd blog",
+      "./bin/bundle install",
+      "./bin/rails db:prepare"
+    ]
+  },
+  "nixpkgs": {
+    "commit": "f80ac848e3d6f0c12c52758c0f25c10c97ca3b62"
+  }
 }

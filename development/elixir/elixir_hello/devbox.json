@@ -1,11 +1,16 @@
 {
-    "packages": ["elixir"],
-    "shell": {
-        "init_hook": [
-            "source conf/set-env.sh",
-            "mix local.hex --force",
-            "mix local.rebar --force",
-            "mix deps.get"
-        ]
-    }
+  "packages": [
+    "elixir"
+  ],
+  "shell": {
+    "init_hook": [
+      "source conf/set-env.sh",
+      "mix local.hex --force",
+      "mix local.rebar --force",
+      "mix deps.get"
+    ]
+  },
+  "nixpkgs": {
+    "commit": "f80ac848e3d6f0c12c52758c0f25c10c97ca3b62"
+  }
 }

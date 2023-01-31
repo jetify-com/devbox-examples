@@ -1,16 +1,19 @@
 {
-  "packages": [
-    "python310",
-    "poetry"
-  ],
-  "shell": {
-    "init_hook": "poetry shell",
-    "scripts": {
-      "start": "poetry run python app.py",
-      "test": "poetry run pytest"
+    "packages": [
+        "python310",
+        "poetry"
+    ],
+    "shell": {
+        "init_hook": [
+            "poetry install",
+            "poetry shell"
+        ],
+        "scripts": {
+            "start": "poetry run python -m poetry_demo",
+            "test": "poetry run pytest"
+        }
+    },
+    "nixpkgs": {
+        "commit": "f80ac848e3d6f0c12c52758c0f25c10c97ca3b62"
     }
-  },
-  "nixpkgs": {
-    "commit": "52e3e80afff4b16ccb7c52e9f0f5220552f03d04"
-  }
 }

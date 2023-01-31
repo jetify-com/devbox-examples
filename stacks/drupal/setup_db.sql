@@ -5,7 +5,7 @@ CREATE DATABASE devbox_drupal;
 
 USE devbox_drupal
 
-CREATE USER 'devbox_user'@'localhost' IDENTIFIED BY 'password';
+CREATE USER IF NOT EXISTS 'devbox_user'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON devbox_drupal.* TO 'devbox_user'@'localhost' IDENTIFIED BY 'password';
 
 -- Connect in drupal using: 
