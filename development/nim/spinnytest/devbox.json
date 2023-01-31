@@ -1,12 +1,13 @@
 {
     "packages": [
+        "nim",
         "nimble-unwrapped",
-        "nim-unwrapped"
+        "openssl_1_1"
     ],
     "shell": {
         "init_hook": null,
         "scripts": {
-            "nim-run": "nim c -r --verbosity:0 helloworld.nim"
+            "nim-build": "nimble build --threads:on"
         }
     },
     "nixpkgs": {
