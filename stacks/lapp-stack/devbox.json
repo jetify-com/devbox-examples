@@ -1,0 +1,22 @@
+{
+  "packages": [
+    "postgresql",
+    "php81",
+    "php81Extensions.pgsql",
+    "apacheHttpd"
+  ],
+  "shell": {
+    "init_hook": [
+      "initdb"
+    ],
+    "scripts": {
+      "create_db": [
+        "createdb devbox_lamp",
+        "psql devbox_lamp < setup_postgres_db.sql"
+      ]
+    }
+  },
+  "nixpkgs": {
+    "commit": "f80ac848e3d6f0c12c52758c0f25c10c97ca3b62"
+  }
+}

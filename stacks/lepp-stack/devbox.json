@@ -1,0 +1,22 @@
+{
+  "packages": [
+    "postgresql",
+    "php81",
+    "nginx",
+    "php81Extensions.pgsql"
+  ],
+  "shell": {
+    "init_hook": [
+      "initdb"
+    ],
+    "scripts": {
+      "create_db": [
+        "createdb devbox_lemp",
+        "psql devbox_lemp < setup_postgres_db.sql"
+      ]
+    }
+  },
+  "nixpkgs": {
+    "commit": "f80ac848e3d6f0c12c52758c0f25c10c97ca3b62"
+  }
+}

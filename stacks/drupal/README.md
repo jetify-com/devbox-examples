@@ -1,8 +1,10 @@
 # Drupal Stack
 
-An example Devbox shell for Drupal CMS
+This example shows how to run a Drupal application in Devbox. It makes use of the PHP and Apache Plugins, while demonstrating how to configure a MariaDB instance to work with Devbox Cloud.
 
-## How to Run
+[![Open In Devbox.sh](https://jetpack.io/img/devbox/open-in-devbox.svg)](https://devbox.sh/github.com/jetpack-io/devbox-examples?folder=stacks/drupal)
+
+## How to Run the example
 
 In this directory, run:
 
@@ -18,9 +20,9 @@ To install Drupal and your dependencies, run `composer install`. The Drupal app 
 
 To exit the shell, use `exit`
 
-## Installing the Umami Example
+## Installing the Umami Example 
 
-Run the `install-drupal.sh` script to install the Umami Drupal example.
+Run the `install-drupal.sh` script to install the Umami Drupal example. This is a good starter project for trying out and familiarizing yourself with Drupal
 
 ## Configuration
 

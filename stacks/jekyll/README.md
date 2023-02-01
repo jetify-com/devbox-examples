@@ -2,6 +2,8 @@
 
 [![Built with Devbox](https://jetpack.io/devbox/img/shield_moon.svg)](https://jetpack.io/devbox/docs/contributor-quickstart/)
 
+[![Open In Devbox.sh](https://jetpack.io/img/devbox/open-in-devbox.svg)](https://devbox.sh/github.com/jetpack-io/devbox-examples?folder=stacks/jekyll)
+
 Inspired by https://litchipi.github.io/nix/2023/01/12/build-jekyll-blog-with-nix.html 
 
 ## How to Use

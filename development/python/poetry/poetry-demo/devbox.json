@@ -1,9 +1,19 @@
 {
     "packages": [
-        "python3",
+        "python310",
         "poetry"
     ],
     "shell": {
-        "init_hook": "poetry shell"
+        "init_hook": [
+            "poetry install",
+            "poetry shell"
+        ],
+        "scripts": {
+            "start": "poetry run python -m poetry_demo",
+            "test": "poetry run pytest"
+        }
+    },
+    "nixpkgs": {
+        "commit": "f80ac848e3d6f0c12c52758c0f25c10c97ca3b62"
     }
 }
