@@ -1,4 +1,4 @@
-# Devbox Cloud Quickstart
+# Devbox Quickstart
 
 This shell includes a basic `devbox.json` with a few useful packages installed, and an example init_hook and script
 
@@ -26,7 +26,8 @@ For example: you can replay this help text with
 devbox run readme
 ```
 
-## Further Reading
+## Next Steps
 
 * Checkout our Docs at [https://jetpack.io/devbox/docs](https://jetpack.io/devbox/docs)
+* Try out an Example Project at [https://jetpack.io/devbox/docs/devbox-examples](https://jetpack.io/devbox/docs/devbox-examples)
 * Report Issues at [https://github.com/jetpack-io/devbox/issues/new/choose](https://github.com/jetpack-io/devbox/issues/new/choose)
