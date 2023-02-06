@@ -2,6 +2,8 @@
 
 This shell includes a basic `devbox.json` with a few useful packages installed, and an example init_hook and script
 
+[![Open In Devbox.sh](https://jetpack.io/img/devbox/open-in-devbox.svg)](https://devbox.sh/github.com/jetpack-io/devbox-examples?folder=tutorial)
+
 ## Adding New Packages
 
 Run `devbox add <package>` to add a new package. Remove it with `devbox rm <package>`.
