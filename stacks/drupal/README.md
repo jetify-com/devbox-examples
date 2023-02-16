@@ -16,13 +16,9 @@ To create the `devbox_drupal` database and example table, you should run:
 
 `mysql -u root < setup_db.sql`
 
-To install Drupal and your dependencies, run `composer install`. The Drupal app will be installed in the `/web` directory, and you can configure your site by visiting `localhost/autoload` in your browser and following the interactive instructions
+To install Drupal and your dependencies, run `composer install`. The Drupal app will be installed in the `/web` directory, and you can configure your site by visiting `localhost:8000/autoload` in your browser and following the interactive instructions
 
 To exit the shell, use `exit`
-
-## Installing the Umami Example 
-
-Run the `install-drupal.sh` script to install the Umami Drupal example. This is a good starter project for trying out and familiarizing yourself with Drupal
 
 ## Configuration
 

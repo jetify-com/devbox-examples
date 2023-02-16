@@ -11,9 +11,6 @@
       "source devbox.d/mysql/set-env.sh"
     ],
     "scripts": {
-      "install_drupal": [
-        "./install-drupal.sh"
-      ],
       "start_services": [
         "devbox.d/mysql/mysql.sh",
         "devbox services start"
