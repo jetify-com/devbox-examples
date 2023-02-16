@@ -1,7 +1,8 @@
 {
   "packages": [
     "bundler",
-    "ruby_3_1"
+    "ruby_3_1",
+    "libffi"
   ],
   "shell": {
     "init_hook": [],
