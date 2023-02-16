@@ -1,11 +1,17 @@
 --- You should run this query using psql < setup_db.sql`
 
-DROP DATABASE IF EXISTS devbox_lamp;
-CREATE DATABASE devbox_lamp;
 
-CREATE USER devbox_user WITH PASSWORD 'password';
+DO
+$do$
+BEGIN
+   IF EXISTS (SELECT FROM pg_catalog.pg_roles WHERE  rolname = 'devbox_user') THEN
+      RAISE NOTICE 'Role "my_user" already exists. Skipping.';
+   ELSE
+      CREATE USER devbox_user WITH PASSWORD 'password';
+   END IF;
+END
+$do$;
 
-DROP TABLE IF EXISTS colors;
 CREATE TABLE colors (
 	id SERIAL NOT NULL PRIMARY KEY,
 	name VARCHAR(100) NOT NULL,

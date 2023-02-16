@@ -8,13 +8,9 @@ An example Devbox shell for NGINX, Postgres, and PHP. This example uses Devbox P
 
 ### Initializing
 
-In this directory, run:
+In this directory, run: `devbox run init_db` to initialize a db.
 
-`devbox shell`
-
-This will run `initdb` automatically on initialization. To start the Servers + Postgres service, run:
-
-`devbox services start`
+To start the Servers + Postgres service, run: `devbox services start`
 
 ### Creating the DB
 
