@@ -23,7 +23,7 @@
             "initdb": [
                 "initdb"
             ],
-            "runserver": [
+            "server": [
                 "python todo_project/manage.py runserver"
             ]
         }

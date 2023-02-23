@@ -10,7 +10,7 @@
 1. Run `devbox shell` to install your packages and run the init_hook. This will activate your virtual environment and install Django.
 1. Initialize PostgreSQL with `devbox run initdb`.
 1. In the root directory, run `devbox run create_db` to create the database and run your Django migrations
-1. In the root directory, run `devbox run runserver` to start the server. You can access the Django example at `localhost:8000`
+1. In the root directory, run `devbox run server` to start the server. You can access the Django example at `localhost:8000`
 
 ## How to Create this Example from Scratch
 
