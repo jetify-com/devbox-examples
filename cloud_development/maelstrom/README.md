@@ -22,6 +22,6 @@ You can skip this step if you're running on Devbox.sh
 
 1. cd into the `maelstrom` directory and run `./maelstrom` to verify everything is working
 
-1. You can now follow the docs and run the tests in the Maelstrom Docs + Readme.
+1. You can now follow the docs and run the tests in the Maelstrom Docs + Readme. You can use `glow` from the command line to browse the docs.
 
 This shell includes Ruby 3.10 for running the Ruby Demos. To run demos in other languages, install the appropriate runtimes using `devbox add`. For example, to run the Python demos, use `devbox add python310`.
