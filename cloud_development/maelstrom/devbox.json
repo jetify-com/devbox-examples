@@ -9,11 +9,18 @@
     ],
     "shell": {
         "init_hook": [
-            "clear && glow README.md"
+            "clear",
+            "echo 'Welcome to the Maelstrom in Devbox Shell! \n * Type `devbox run help` to get started.\n * Type `devbox run install` to install Maelstrom.\n * After installing Maelstrom, type `devbox run docs` to browse the Maelstrom docs.'"
         ],
         "scripts": {
             "install": [
                 "tar xjf <(curl -L -k https://github.com/jepsen-io/maelstrom/releases/download/v0.2.2/maelstrom.tar.bz2)"
+            ],
+            "help": [
+                "glow README.md"
+            ],
+            "docs": [
+                "glow maelstrom/doc"
             ]
         }
     },
