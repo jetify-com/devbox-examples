@@ -4,10 +4,13 @@
         "graphviz",
         "gnuplot",
         "ruby_3_1",
-        "curl"
+        "curl",
+        "glow"
     ],
     "shell": {
-        "init_hook": [],
+        "init_hook": [
+            "glow README.md"
+        ],
         "scripts": {
             "install": [
                 "tar xjf <(curl -L -k https://github.com/jepsen-io/maelstrom/releases/download/v0.2.2/maelstrom.tar.bz2)"

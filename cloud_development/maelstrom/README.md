@@ -6,16 +6,22 @@ A Devbox for running [Maelstrom](https://github.com/jepsen-io/maelstrom) Tests. 
 
 You should also check out the [Fly.io Distributed Systems Challenge](https://fly.io/dist-sys/)
 
+## Prerequisites
+
+If you don't already have [Devbox](https://www.jetpack.io/devbox/docs/installing_devbox/), you can install it by running the following command:
+
+```bash
+curl -s https://www.jetpack.io/install.sh | bash
+```
+
+You can skip this step if you're running on Devbox.sh
+
 ## Usage
 
-1. Install [Devbox](https://www.jetpack.io/devbox/docs/installing_devbox/):
+1. Install Maelstrom by running `devbox run install`. This should install Maelstrom 0.2.2 in a `maelstrom` subdirectory
 
-    ```bash
-    curl -s https://www.jetpack.io/install.sh | bash
-    ```
+1. cd into the `maelstrom` directory and run `./maelstrom` to verify everything is working
 
-2. Install Maelstrom by running `devbox run install`. This should install Maelstrom 0.2.2 in a `maelstrom` subdirectory
-3. cd into the `maelstrom` directory and run `./maelstrom` to verify everything is working
-4. You can now follow the docs and run the tests in the Maelstrom Docs + Readme.
+1. You can now follow the docs and run the tests in the Maelstrom Docs + Readme. You can use `glow` from the command line to browse the docs.
 
-This shell includes Ruby 3.10 for running the Ruby Demos. To run demos in other languages, install the appropriate runtimes using `devbox add`. For example, to run the Python demos, use `devbox add python3.10`.
+This shell includes Ruby 3.10 for running the Ruby Demos. To run demos in other languages, install the appropriate runtimes using `devbox add`. For example, to run the Python demos, use `devbox add python310`.
