@@ -1,0 +1,20 @@
+{
+    "packages": [
+        "openjdk17",
+        "graphviz",
+        "gnuplot",
+        "ruby_3_1",
+        "curl"
+    ],
+    "shell": {
+        "init_hook": [],
+        "scripts": {
+            "install": [
+                "tar xjf <(curl -L -k https://github.com/jepsen-io/maelstrom/releases/download/v0.2.2/maelstrom.tar.bz2)"
+            ]
+        }
+    },
+    "nixpkgs": {
+        "commit": "f80ac848e3d6f0c12c52758c0f25c10c97ca3b62"
+    }
+}
