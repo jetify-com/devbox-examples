@@ -5,11 +5,12 @@
     "kubernetes-helm-wrapped",
     "docker"
   ],
+  "env": {
+	  "MINIKUBE_HOME": "$PWD/home/.minkube",
+	  "KUBECONFIG": "$PWD/home/.kube/config"
+  },
   "shell": {
     "init_hook": [
-      "export DEVBOX_HOME=$PWD/home",
-      "export MINIKUBE_HOME=$DEVBOX_HOME/.minikube",
-      "export KUBECONFIG=$DEVBOX_HOME/.kube/config",
       "helm repo add my-repo https://charts.bitnami.com/bitnami"
     ],
     "scripts": {
