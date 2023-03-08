@@ -21,7 +21,7 @@
                 "kubectl -n argo port-forward deployment/argo-server 2746:2746"
             ],
             "minikube": [
-                "finish() { minikube -p argo-test stop }",
+                "finish() { minikube -p argo-test stop; }",
                 "trap finish SIGTERM SIGINT EXIT",
                 "minikube start -p argo-test",
                 "minikube -p argo-test logs -f"
