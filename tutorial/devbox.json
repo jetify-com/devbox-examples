@@ -1,7 +1,6 @@
 {
     "packages": [
         "vim",
-        "emacs",
         "gh",
         "glow"
     ],
