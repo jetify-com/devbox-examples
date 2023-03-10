@@ -14,8 +14,8 @@
         "scripts": {
             "argo-install": [
                 "kubectl create namespace argo",
-                "kubectl apply -n argo -f https://github.com/argoproj/argo-workflows/releases/download/v3.3.10/namespace-install.yaml",
-                "source argo-patch.sh"
+                "kubectl apply -n argo -f https://github.com/argoproj/argo-workflows/releases/download/v3.4.5/install.yaml",
+                "bash argo-patch.sh"
             ],
             "argo-port-forward": [
                 "kubectl -n argo port-forward deployment/argo-server 2746:2746"
