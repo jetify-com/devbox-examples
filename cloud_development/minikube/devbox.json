@@ -1,27 +1,28 @@
 {
-  "packages": [
-    "minikube",
-    "kubectl",
-    "kubernetes-helm-wrapped",
-    "docker"
-  ],
-  "shell": {
-    "init_hook": [
-      "export DEVBOX_HOME=$PWD/home",
-      "export MINIKUBE_HOME=$DEVBOX_HOME/.minikube",
-      "export KUBECONFIG=$DEVBOX_HOME/.kube/config",
-      "helm repo add my-repo https://charts.bitnami.com/bitnami"
+    "packages": [
+        "minikube",
+        "kubectl",
+        "kubernetes-helm-wrapped",
+        "docker"
     ],
-    "scripts": {
-      "minikube": [
-        "finish() { minikube stop }",
-        "trap finish SIGTERM SIGINT EXIT",
-        "minikube start",
-        "minikube logs -f"
-      ]
+    "env": {
+        "MINIKUBE_HOME": "$PWD/home/.minkube",
+        "KUBECONFIG": "$PWD/home/.kube/config"
+    },
+    "shell": {
+        "init_hook": [
+            "helm repo add my-repo https://charts.bitnami.com/bitnami"
+        ],
+        "scripts": {
+            "minikube": [
+                "finish() { minikube stop; }",
+                "trap finish SIGTERM SIGINT EXIT",
+                "minikube start",
+                "minikube logs -f"
+            ]
+        }
+    },
+    "nixpkgs": {
+        "commit": "f80ac848e3d6f0c12c52758c0f25c10c97ca3b62"
     }
-  },
-  "nixpkgs": {
-    "commit": "f80ac848e3d6f0c12c52758c0f25c10c97ca3b62"
-  }
 }

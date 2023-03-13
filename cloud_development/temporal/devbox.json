@@ -11,12 +11,10 @@
     ],
     "shell": {
         "init_hook": [
-            "echo \"Setting flags to allow Python C extension compilation\"",
+            "echo 'Setting flags to allow Python C extension compilation'",
             "export NIX_CFLAGS_COMPILE=\"$NIX_CFLAGS_COMPILE $(cat $(dirname $(which clang))/../nix-support/libcxx-cxxflags)\"",
-            "echo \"Setting up virtual environment\"",
-            "export VENV_DIR=.venv",
-            "sh venvShellHook.sh",
-            "source \"${VENV_DIR}/bin/activate\""
+            "echo 'Setting up virtual environment'",
+            "source $VENV_DIR/bin/activate"
         ],
         "scripts": {
             "start-temporal": "temporalite start --namespace default --log-level warn --log-format pretty --ephemeral"
