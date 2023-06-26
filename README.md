@@ -1,4 +1,6 @@
-# Devbox Examples
+# NOTE: This repo is now archived and read-only. For Devbox examples and templates, visit the [Examples Section](https://github.com/jetpack-io/devbox/tree/main/examples) of the Devbox Repo. 
+
+## Devbox Examples
 
 [![Built with Devbox](https://jetpack.io/devbox/img/shield_moon.svg)](https://jetpack.io/devbox/docs/contributor-quickstart/)
 
